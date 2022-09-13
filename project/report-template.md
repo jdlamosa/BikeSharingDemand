@@ -14,12 +14,19 @@ Also, Kaggle will reject the submission if we don't set everything to be > 0, so
 During the analysis it was possible to observe some negative values in forecasts that needed to be converted to 0. With the describe() function it was possible to observe the following values:
 
 count 6493.000000
+
 mean 133.735245
+
 std 107.665695
+
 min -4.014292
+
 25% 55.329243
+
 50% 111.014687
+
 75% 179.776245
+
 max 725.000122
 
 In order for autogluon to convert the date to integers, the datetime column needed to be converted to datetime format. So I created a column for year, week, hour and day of the week using datetime.
@@ -55,3 +62,5 @@ I think that I would spend more time doing feature engineering.
 With autogloun it is possible to combine outputs from RandomForest, CatBoost, k-nearest neighbors and others to further improve model accuracy. AutoGluon-Tabular introduces a new way of stacking multiple layers of models.
 
 In the tests performed, after the date treatment, the autogloun presented a good performance.
+
+Click [here](https://aws.amazon.com/blogs/opensource/machine-learning-with-autogluon-an-open-source-automl-library/) if you want to know more about AutoGluon-Tabular 
